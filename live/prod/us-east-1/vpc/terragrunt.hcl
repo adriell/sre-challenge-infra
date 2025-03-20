@@ -24,11 +24,12 @@ terraform {
 # inputs get merged with the common inputs from the root and the envcommon terragrunt.hcl
 inputs = {
   name = "sre-challenge-vpc"
-  cidr = "172.16.0.0/27"
+  cidr = "10.172.0.0/16"
   
   azs                           = ["us-east-1a","us-east-1b"]
-  private_subnets_cidr_blocks   = ["172.16.0.0/28","172.16.0.16/28"]
-  
+  private_subnets_cidr_blocks   = ["10.172.0.0/24", "10.172.16.0/24"]
+  public_subnets_cidr_blocks    = ["10.172.48.0/24"]
+
   vpc_tags = {
     Project    = "sre-challenge"
     Owner      = "SRE Team"
@@ -37,5 +38,4 @@ inputs = {
   tags = {
     Terraform = "true"
   }
-  allocated_storage = 100
 }

@@ -14,6 +14,11 @@ variable "private_subnets_cidr_blocks" {
     type        = list(string)
 }
 
+variable "public_subnets_cidr_blocks" {
+    description = "List of cidr_blocks of public subnets"
+    type        = list(string)
+}
+
 variable "create_private_nat_gateway_route" {
   description = "Controls if a nat gateway route should be created to give internet access to the private subnets"
   type        = bool

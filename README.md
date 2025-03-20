@@ -1,4 +1,4 @@
-# Documentação do Desafio de Infraestrutura e Deployment
+# SRE Challenge
 
 ## Introdução
 Este documento detalha a solução implementada para o desafio, abordando desde a containerização da aplicação até a automação do deployment no AWS Kubernetes (EKS), utilizando AWS CodePipeline, Terraform e Helm.
